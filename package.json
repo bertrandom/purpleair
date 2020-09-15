@@ -1,8 +1,8 @@
 {
   "name": "purpleair",
   "version": "1.0.5",
-  "description": "Retrieve AQI (with AQandU conversion) from a Purpleair sensor via the CLI or as a library to your node script",
-  "keywords": ["purple air", "purpleair", "aqi", "aqandu"],
+  "description": "Retrieve AQI (with AQandU conversion) from a PurpleAir sensor via the CLI or as a library to your node script",
+  "keywords": ["purple air", "purpleair", "PurpleAir", "aqi", "aqandu"],
   "main": "lib/aqi.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

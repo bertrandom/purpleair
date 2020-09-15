@@ -1,12 +1,12 @@
 # purpleair
 
-Retrieve AQI (with [AQandU conversion](https://thebolditalic.com/understanding-purpleair-vs-airnow-gov-measurements-of-wood-smoke-pollution-562923a55226)) from a Purpleair sensor via the CLI or as a library to your node script
+Retrieve AQI (with [AQandU conversion](https://thebolditalic.com/understanding-purpleair-vs-airnow-gov-measurements-of-wood-smoke-pollution-562923a55226)) from a PurpleAir sensor via the CLI or as a library to your node script
 
 Most of this code was stolen from [https://aqi.wtf](https://github.com/skalnik/aqi-wtf)
 
 ## determine your purpleair sensor ID
 
-Open the Purple Air map:
+Open the PurpleAir map:
 https://www.purpleair.com/map?mylocation
 
 and click on the sensor closest to your location.
