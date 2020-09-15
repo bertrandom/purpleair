@@ -12,6 +12,7 @@ https://www.purpleair.com/map?mylocation
 and click on the sensor closest to your location.
 
 The URL bar will change to something like:
+
 `https://www.purpleair.com/map?opt=1/mAQI/a10/cC0&select=62217#15.69/37.737125/-122.414218`
 
 The sensor ID will be the value of the `select` parameter. In the above URL, the ID is 62217:
