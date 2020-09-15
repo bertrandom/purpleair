@@ -6,21 +6,41 @@ var argv = require('yargs')
         type: 'boolean',
         desc: 'Append the AQI class at the end in parenthesis'
     })
+    .option('j', {
+        alias: 'json',
+        type: 'boolean',
+        desc: 'Output as JSON'
+    })
     .demandCommand(1)
     .argv;
 
 const libAqi = require('./lib/aqi');
 
-libAqi.getSensor(argv._[0]).then(async function (sensor) {
+var sensorId = argv._[0];
+
+libAqi.getSensor(sensorId).then(async function (sensor) {
     var aqi = await libAqi.getAQI(sensor);
 
     var output = aqi;
+    aqiClass = null;
     if (argv.class) {
-        var aqiClass = libAqi.getAQIClass(aqi);
+        aqiClass = libAqi.getAQIClass(aqi);
         output = `${aqi} (${aqiClass})`;
     }
 
-    console.log(output);
+    if (argv.json) {
+        var outputJson = {
+            aqi: aqi,
+            sensorId: sensorId,
+        };
+        if (aqiClass) {
+            outputJson.class = aqiClass;
+        }
+        console.log(JSON.stringify(outputJson, null, 2));
+    } else {
+        console.log(output);
+    }
+
 
 }).catch(err => {
     console.error(err);
