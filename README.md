@@ -50,6 +50,17 @@ With the AQI class:
 139 (unhealthy-for-sensitive-groups)
 ```
 
+As JSON:
+```
+> purpleair --class --json 62217
+{
+  "aqi": 139,
+  "sensorId": 62217,
+  "class": "unhealthy-for-sensitive-groups"
+}
+```
+
+
 ## library usage
 
 There are three functions:
