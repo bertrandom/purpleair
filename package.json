@@ -1,6 +1,6 @@
 {
   "name": "purpleair",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Retrieve AQI (with AQandU conversion) from a Purpleair sensor via the CLI or as a library to your node script",
   "main": "lib/aqi.js",
   "scripts": {
